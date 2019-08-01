@@ -1,4 +1,10 @@
+variable "softlayer_username" {}
+variable "softlayer_api_key" {}
+
 provider "ibm" {
+  region = "us-south"
+  softlayer_username = "${var.softlayer_username}"
+  softlayer_api_key  = "${var.softlayer_api_key}"
 }
 
 resource "ibm_compute_vm_instance" "vm1" {
