@@ -1,3 +1,6 @@
+provider "ibm" {
+}
+
 resource "ibm_compute_vm_instance" "vm1" {
 hostname = "vm1"
 domain = "example.com"
